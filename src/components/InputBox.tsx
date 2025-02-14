@@ -49,7 +49,7 @@ const InputBox = ({
           <Image
             src={upload}
             alt="upload"
-            className="p-1 w-8 h-8 opacity-50 mt-3 rounded-full hover:bg-brown/20 hover:opacity-70 transition-all duration-200"
+            className="p-1 w-8 h-8 min-w-8 min-h-8 opacity-50 mt-3 rounded-full hover:bg-brown/20 hover:opacity-70 transition-all duration-200"
           />
         )}
 
@@ -58,7 +58,7 @@ const InputBox = ({
             <Image
               src={send}
               alt="send"
-              className="p-1 w-8 h-8 opacity-50 mt-3 rounded-full hover:bg-brown/20 hover:opacity-70 transition-all duration-200"
+              className="p-1 w-8 h-8 min-w-8 min-h-8 opacity-50 mt-3 rounded-full hover:bg-brown/20 hover:opacity-70 transition-all duration-200"
             />
           </button>
         )}

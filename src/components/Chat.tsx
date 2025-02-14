@@ -58,20 +58,6 @@ const Chat = () => {
           message="I want to help independent bookstores compete with Amazon by connecting readers directly to the local stores that have the books they want in stock"
         />
         <AiChat message="I want to help independent bookstores compete with Amazon by connecting readers directly to the local stores that have the books they want in stock" />
-        <UserChat
-          username="Johnny"
-          message="I want to help independent bookstores compete with Amazon by connecting readers directly to the local stores that have the books they want in stock"
-        />
-        <AiChat message="I want to help independent bookstores compete with Amazon by connecting readers directly to the local stores that have the books they want in stock" />
-        <UserChat
-          username="Johnny"
-          message="I want to help independent bookstores compete with Amazon by connecting readers directly to the local stores that have the books they want in stock"
-        />
-        <AiChat message="I want to help independent bookstores compete with Amazon by connecting readers directly to the local stores that have the books they want in stock" />
-        <UserChat
-          username="Johnny"
-          message="I want to help independent bookstores compete with Amazon by connecting readers directly to the local stores that have the books they want in stock"
-        />
 
         <InputBox placeholder="Send a message" css="sticky bottom-6 left-5 w-[calc(100%-2.5rem)]" />
       </div>
