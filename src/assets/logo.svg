@@ -1,0 +1,14 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+    <rect width="32" height="32" rx="8" fill="#1B3B36"></rect>
+    <rect width="32" height="32" rx="8" fill="url(#omni_logo_shine)" fill-opacity="0.15"></rect>
+    <path
+        d="M22.5 16.5C22.5 19.8137 19.8137 22.5 16.5 22.5C13.1863 22.5 10.5 19.8137 10.5 16.5C10.5 13.1863 13.1863 10.5 16.5 10.5C19.8137 10.5 22.5 13.1863 22.5 16.5Z"
+        stroke="#F6F3E4" stroke-width="1.5"></path>
+    <defs>
+        <linearGradient id="omni_logo_shine" x1="32" y1="0" x2="0" y2="32" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#A65D57" stop-opacity="0.3"></stop>
+            <stop offset="0.5" stop-color="#F6F3E4" stop-opacity="0.1"></stop>
+            <stop offset="1" stop-color="#464B3C" stop-opacity="0.2"></stop>
+        </linearGradient>
+    </defs>
+</svg>
