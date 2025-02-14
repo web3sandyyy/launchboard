@@ -13,7 +13,7 @@ const InitialPage = ({ setShowSearchResults }: { setShowSearchResults: (value: b
   };
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }} className="min-h-full max-h-[100dvh-2rem] w-full bg-tertiary rounded-lg p-4 flex justify-center items-center border border-brown/5">
+    <motion.div initial={{ opacity: 1 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }} className="min-h-full max-h-[100dvh-2rem] w-full bg-tertiary rounded-lg p-4 flex justify-center items-center border border-brown/5">
       <div className="w-full md:w-[600px]   ">
         <div className="flex items-center justify-center gap-4">
           <Image src={logo} alt="logo" className="w-8 h-8" />
