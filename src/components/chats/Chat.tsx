@@ -4,7 +4,7 @@ import save from "@/assets/icons/save.svg";
 import star from "@/assets/icons/star.svg";
 import settingsBrown from "@/assets/icons/settingsBrown.svg";
 import UserChat from "./UserChat";
-import InputBox from "./InputBox";
+import InputBox from "../InputBox";
 import AiChat from "./AiChat";
 
 const Chat = () => {

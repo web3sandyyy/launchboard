@@ -3,7 +3,7 @@ import Image from "next/image";
 import search from "@/assets/icons/search.svg";
 import { motion, AnimatePresence } from "framer-motion";
 
-const WorkspaceChat = ({
+const ResearchCard = ({
   title,
   researchType,
   keyPoints,
@@ -57,4 +57,4 @@ const WorkspaceChat = ({
   );
 };
 
-export default WorkspaceChat;
+export default ResearchCard;

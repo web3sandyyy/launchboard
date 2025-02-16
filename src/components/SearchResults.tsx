@@ -1,6 +1,6 @@
 import React from 'react'
-import Chat from './Chat'
-import Workspace from './Workspace' 
+import Chat from './chats/Chat'
+import Workspace from './workspace/Workspace' 
 import { motion } from 'framer-motion'
 const SearchResults = () => {
   return (

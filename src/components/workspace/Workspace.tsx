@@ -8,8 +8,9 @@ import marketing from "@/assets/icons/market.svg";
 import buissnessSelected from "@/assets/icons/buissnessGreen.svg";
 import technicalSelected from "@/assets/icons/technicalGreen.svg";
 import marketingSelected from "@/assets/icons/marketGreen.svg";
-import WorkspaceChat from "./WorkspaceChat";
+import WorkspaceChat from "./ResearchCard";
 import { useState } from "react";
+import BuissnessModalCanvas from "./BuissnessModalCanvas";
 
 const Workspace = () => {
   const [selected, setSelected] = useState("Buissness");
@@ -31,24 +32,6 @@ const Workspace = () => {
     },
   ];
 
-  const workspaceChats = [
-    {
-      title: "Evaluating total addressing market and growth trajectory",
-      researchType: "Market Research",
-      keyPoints: ["Market size", "Growth trajectory", "Competitive landscape"],
-    },
-    {
-      title: "Matching the right product to the right customer",
-      researchType: "Market Research",
-      keyPoints: ["Market size", "Growth trajectory", "Competitive landscape"],
-    },
-    {
-      title: "Identifying the right product for the right customer",
-      researchType: "Market Research",
-      keyPoints: ["Market size", "Growth trajectory", "Competitive landscape"],
-    },
-  ];
-
   return (
     <div className="w-full max-h-full bg-tertiary rounded-lg border border-brown/5 flex flex-col ">
       <div className="flex justify-between items-center p-4 border-b-2 border-brown/10 ">
@@ -64,7 +47,7 @@ const Workspace = () => {
           {options.map((option, index) => (
             <div
               key={index}
-              className={`flex items-center gap-2 opacity-70 cursor-pointer p-2 rounded-lg ${
+              className={`flex items-center gap-2 opacity-80 cursor-pointer p-2 rounded-lg duration-200 ${
                 selected === option.name ? "shadow-lg" : ""
               }`}
               onClick={() => setSelected(option.name)}
@@ -81,7 +64,7 @@ const Workspace = () => {
                   selected === option.name
                     ? "font-semibold text-primary"
                     : "font-normal text-brown"
-                }`}
+                } duration-200`}
               >
                 {option.name}
               </p>
@@ -89,19 +72,9 @@ const Workspace = () => {
           ))}
         </div>
 
-        {
-          <div className="flex flex-col gap-4">
-            {workspaceChats.map((chat, index) => (
-              <WorkspaceChat
-                key={index}
-                title={chat.title}
-                researchType={chat.researchType}
-                keyPoints={chat.keyPoints}
-                showKeyConsiderations={index === workspaceChats.length - 1}
-              />
-            ))}
-          </div>
-        }
+        <BuissnessModalCanvas />
+
+
       </div>
     </div>
   );
