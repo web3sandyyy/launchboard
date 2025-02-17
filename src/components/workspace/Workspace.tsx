@@ -4,12 +4,12 @@ import Image from "next/image";
 import settings from "@/assets/icons/settings.svg";
 import buissness from "@/assets/icons/buissness.svg";
 import technical from "@/assets/icons/technical.svg";
-import marketing from "@/assets/icons/market.svg";  
+import marketing from "@/assets/icons/market.svg";
 import WorkspaceChat from "./ResearchCard";
 import { useState } from "react";
 import BuissnessModalCanvas from "./BuissnessModalCanvas";
 
-const Workspace = () => {
+const Workspace = ({ isSelected }: { isSelected: boolean }) => {
   const [selected, setSelected] = useState("Buissness");
   const options = [
     {
@@ -27,7 +27,11 @@ const Workspace = () => {
   ];
 
   return (
-    <div className="w-full max-h-full bg-blackTwo flex flex-col ">
+    <div
+      className={`w-full max-h-full bg-blackTwo flex flex-col flex-grow overflow-y-auto ${
+        isSelected ? "" : "hidden lg:flex"
+      }`}
+    >
       <div className="flex justify-between items-center p-4 border-b-2 border-blackOne ">
         <p className="text-lg font-semibold text-white">Workspace</p>
 
@@ -37,7 +41,7 @@ const Workspace = () => {
       </div>
 
       <div className="p-5 pt-4  flex flex-col gap-4 flex-grow relative overflow-y-auto max-h-full">
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           {options.map((option, index) => (
             <div
               key={index}
@@ -46,7 +50,13 @@ const Workspace = () => {
               }`}
               onClick={() => setSelected(option.name)}
             >
-              <Image src={option.icon} alt={option.name} width={24} height={24} className="w-6 h-6" />
+              <Image
+                src={option.icon}
+                alt={option.name}
+                width={24}
+                height={24}
+                className="w-6 h-6"
+              />
               <p
                 className={` ${
                   selected === option.name ? "font-semibold " : "font-normal "
