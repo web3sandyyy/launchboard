@@ -20,7 +20,7 @@ const BuissnessModalCard = ({ title, points }: BuissnessModalCardProps) => {
           {points.map((point, index) => (
             <div
               key={index}
-              className="p-3 rounded-lg bg-blackThree hover:bg-blackTwo hover:shadow-md shadow-brown duration-200  "
+              className="p-3 rounded-lg bg-blackThree hover:bg-white/10 hover:shadow-md shadow-brown duration-200  "
             >
               <p className=" font-semibold text-orange ">{point.label}</p>
               <p className=" mt-2">{point.description}</p>

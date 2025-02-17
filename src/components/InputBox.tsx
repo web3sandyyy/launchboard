@@ -22,9 +22,7 @@ const InputBox = ({
   onSubmitFunction?: () => void;
 }) => {
   return (
-    <div
-      className={`bg-blackThree  rounded-lg p-6 mt-5 ${css}`}
-    >
+    <div className={`bg-blackThree  rounded-lg p-6 mt-5 ${css}`}>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -50,7 +48,7 @@ const InputBox = ({
             <Image
               src={send}
               alt="send"
-              className="p-1 w-8 h-8 min-w-8 min-h-8 mt-1 rounded-md bg-orange   transition-all duration-200"
+              className="p-1 w-8 h-8 min-w-8 min-h-8 mt-1 rounded-md bg-orange duration-200  active:bg-orange/80"
             />
           </button>
         )}
@@ -59,7 +57,7 @@ const InputBox = ({
           <Image
             src={upload}
             alt="upload"
-            className="p-1 w-8 h-8 min-w-8 min-h-8 mt-1 rounded-md bg-blackOne
+            className="p-1 w-8 h-8 min-w-8 min-h-8 mt-1 rounded-md bg-blackOne  active:bg-blackOne/80
               transition-all duration-200"
           />
         )}

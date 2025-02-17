@@ -51,7 +51,8 @@ const InitialPage = ({
           {suggestion.map((suggestion, index) => (
             <p
               key={index}
-              className="p-4 rounded-lg bg-blackOne text-white border-2 border-white/5"
+              onClick={() => handleSubmit()}
+              className="p-4 rounded-lg bg-blackOne text-white border-2 border-white/5 active:bg-blackOne/80 hover:cursor-pointer duration-200 hover:bg-white/10"
             >
               {suggestion}
             </p>
