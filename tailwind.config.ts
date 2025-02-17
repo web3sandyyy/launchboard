@@ -15,6 +15,7 @@ export default {
         blackThree: "#121212",
         blackTwo: "#1b1d1d",
         blackOne: "#242727",
+        orange: "#fa7435",
       },
       fontFamily: {
         lora: ['var(--font-lora)'],

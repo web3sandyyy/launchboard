@@ -22,7 +22,7 @@ const BuissnessModalCard = ({ title, points }: BuissnessModalCardProps) => {
               key={index}
               className="p-3 rounded-lg bg-blackThree hover:bg-blackTwo hover:shadow-md shadow-brown duration-200  "
             >
-              <p className=" font-semibold text-emerald-400 ">{point.label}</p>
+              <p className=" font-semibold text-orange ">{point.label}</p>
               <p className=" mt-2">{point.description}</p>
             </div>
           ))}

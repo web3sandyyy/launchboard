@@ -42,7 +42,7 @@ const Workspace = () => {
             <div
               key={index}
               className={`flex items-center gap-2 cursor-pointer p-2 px-4 rounded-lg duration-200 text-white ${
-                selected === option.name ? "bg-emerald-600" : "bg-blackOne"
+                selected === option.name ? "bg-orange" : "bg-blackOne"
               }`}
               onClick={() => setSelected(option.name)}
             >

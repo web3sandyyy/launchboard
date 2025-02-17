@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import bulb from "@/assets/icons/bulb.svg";
 import InputBox from "./InputBox";
+import logo from "@/assets/logo.png";
 import { motion } from "framer-motion";
 
 const InitialPage = ({
@@ -33,9 +33,7 @@ const InitialPage = ({
       <div className="w-full -mt-8">
         <div className="md:w-[600px] mx-auto ">
           <div className="flex items-center justify-center gap-4">
-            <div className="logo-gradient  rounded-full p-2 flex items-center justify-center w-fit ">
-              <Image src={bulb} alt="bulb" className="w-10 h-10" />
-            </div>
+              <Image src={logo} alt="bulb" className="w-10 h-10" />
             <p className="text-lg md:text-xl lg:text-2xl font-semibold text-white">
               What would you like to create?
             </p>
