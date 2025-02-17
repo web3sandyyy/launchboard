@@ -1,13 +1,10 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import settingsBrown from "@/assets/icons/settingsBrown.svg";
+import settings from "@/assets/icons/settings.svg";
 import buissness from "@/assets/icons/buissness.svg";
 import technical from "@/assets/icons/technical.svg";
-import marketing from "@/assets/icons/market.svg";
-import buissnessSelected from "@/assets/icons/buissnessGreen.svg";
-import technicalSelected from "@/assets/icons/technicalGreen.svg";
-import marketingSelected from "@/assets/icons/marketGreen.svg";
+import marketing from "@/assets/icons/market.svg";  
 import WorkspaceChat from "./ResearchCard";
 import { useState } from "react";
 import BuissnessModalCanvas from "./BuissnessModalCanvas";
@@ -18,52 +15,41 @@ const Workspace = () => {
     {
       name: "Buissness",
       icon: buissness,
-      selectedIcon: buissnessSelected,
     },
     {
       name: "Technical",
       icon: technical,
-      selectedIcon: technicalSelected,
     },
     {
       name: "Marketing",
       icon: marketing,
-      selectedIcon: marketingSelected,
     },
   ];
 
   return (
-    <div className="w-full max-h-full bg-tertiary rounded-lg border border-brown/5 flex flex-col ">
-      <div className="flex justify-between items-center p-4 border-b-2 border-brown/10 ">
-        <p className="text-lg font-semibold text-brown">Workspace</p>
+    <div className="w-full max-h-full bg-blackTwo flex flex-col ">
+      <div className="flex justify-between items-center p-4 border-b-2 border-blackOne ">
+        <p className="text-lg font-semibold text-white">Workspace</p>
 
         <div className="flex items-center gap-5 ">
-          <Image src={settingsBrown} alt="settings" className="w-6 h-6" />
+          <Image src={settings} alt="settings" className="w-6 h-6" />
         </div>
       </div>
 
       <div className="p-5 pt-4  flex flex-col gap-4 flex-grow relative overflow-y-auto max-h-full">
-        <div className="flex gap-6">
+        <div className="flex gap-2">
           {options.map((option, index) => (
             <div
               key={index}
-              className={`flex items-center gap-2 opacity-80 cursor-pointer p-2 rounded-lg duration-200 ${
-                selected === option.name ? "shadow-lg" : ""
+              className={`flex items-center gap-2 cursor-pointer p-2 px-4 rounded-lg duration-200 text-white ${
+                selected === option.name ? "bg-emerald-600" : "bg-blackOne"
               }`}
               onClick={() => setSelected(option.name)}
             >
-              <Image
-                src={
-                  selected === option.name ? option.selectedIcon : option.icon
-                }
-                alt={option.name}
-                className="w-6 h-6"
-              />
+              <Image src={option.icon} alt={option.name} width={24} height={24} className="w-6 h-6" />
               <p
                 className={` ${
-                  selected === option.name
-                    ? "font-semibold text-primary"
-                    : "font-normal text-brown"
+                  selected === option.name ? "font-semibold " : "font-normal "
                 } duration-200`}
               >
                 {option.name}
@@ -73,8 +59,6 @@ const Workspace = () => {
         </div>
 
         <BuissnessModalCanvas />
-
-
       </div>
     </div>
   );

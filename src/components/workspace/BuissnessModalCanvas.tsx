@@ -41,7 +41,7 @@ const BuissnessModalCanvas = () => {
 
   return (
     <div>
-      <p className="text-xl font-semibold">Buissness Model Canvas</p>
+      <p className="text-xl text-white font-semibold">Buissness Model Canvas</p>
       <div className="grid grid-cols-2 gap-4 mt-4">
         {data.map((card, index) => (
           <BuissnessModalCard

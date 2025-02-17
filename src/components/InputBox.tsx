@@ -23,7 +23,7 @@ const InputBox = ({
 }) => {
   return (
     <div
-      className={`bg-secondary shadow-lg shadow-brown/20 rounded-lg p-6 border border-brown/20 mt-5 ${css}`}
+      className={`bg-blackThree  rounded-lg p-6 mt-5 ${css}`}
     >
       <form
         onSubmit={(e) => {
@@ -34,7 +34,7 @@ const InputBox = ({
       >
         <textarea
           placeholder={placeholder}
-          className="w-full p-2 bg-transparent border-none focus:outline-none focus:ring-0 placeholder:text-black/50 resize-none overflow-wrap-break-word min-h-[40px]"
+          className="w-full p-2 bg-transparent border-none focus:outline-none focus:ring-0 placeholder:text-white/70 resize-none overflow-wrap-break-word min-h-[40px] text-white"
           rows={1}
           style={{ overflow: "hidden" }}
           onChange={(e) => {
@@ -45,22 +45,23 @@ const InputBox = ({
           value={value}
         />
 
-        {isUpload && (
-          <Image
-            src={upload}
-            alt="upload"
-            className="p-1 w-8 h-8 min-w-8 min-h-8 opacity-50 mt-3 rounded-full hover:bg-brown/20 hover:opacity-70 transition-all duration-200"
-          />
-        )}
-
         {isSend && (
           <button type="submit" className="">
             <Image
               src={send}
               alt="send"
-              className="p-1 w-8 h-8 min-w-8 min-h-8 opacity-50 mt-3 rounded-full hover:bg-brown/20 hover:opacity-70 transition-all duration-200"
+              className="p-1 w-8 h-8 min-w-8 min-h-8 mt-1 rounded-md bg-emerald-600   transition-all duration-200"
             />
           </button>
+        )}
+
+        {isUpload && (
+          <Image
+            src={upload}
+            alt="upload"
+            className="p-1 w-8 h-8 min-w-8 min-h-8 mt-1 rounded-md bg-blackOne
+              transition-all duration-200"
+          />
         )}
       </form>
     </div>

@@ -8,9 +8,9 @@ import { AnimatePresence } from "framer-motion";
 export default function Home() {
   const [showSearchResults, setShowSearchResults] = useState(false);
   return (
-    <div className="min-h-[100dvh] w-full bg-secondary p-4 flex gap-4 ">
+    <div className="min-h-[100dvh] w-full flex bg-blackTwo">
       <Sidebar />
-      <div className="flex-grow max-h-full rounded-lg">
+      <div className="flex-grow max-h-full">
         <AnimatePresence>
           {showSearchResults ? <SearchResults /> : <InitialPage setShowSearchResults={setShowSearchResults} />}
         </AnimatePresence>

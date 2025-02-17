@@ -11,10 +11,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "#1B3B36",
-        secondary: "#F4F2E3",
-        tertiary: "#E8E0D4",
-        brown: "#493628",
+
+        blackThree: "#121212",
+        blackTwo: "#1b1d1d",
+        blackOne: "#242727",
       },
       fontFamily: {
         lora: ['var(--font-lora)'],
